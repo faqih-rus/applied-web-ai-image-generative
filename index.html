@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image by Zasqink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="img-logo" src="img/LOGO_UNJ_TRO_MOD-removebg-preview.png" alt="">
+    <div class="container">
+        <h1>UNJ TRO AI Image Generator</h1>
+        <p>Selamat datang di AI Image Generator UNJ TRO! Temukan keajaiban kreativitas saat AI mengubah konsep menjadi gambar menakjubkan. Ekspresikan imajinasi Anda dengan sekali klik!</p>
+        <form class="gen-form">
+            <input type="text" id="user-prompt" placeholder="Tulis prompt kamu disini..." 
+            autocomplet="off" >
+            <button type="button" id="generate">Generate!</button>
+        </form>
+        <div class="result">
+            <div id="loading">Gambarin dulu sebentar rek...</div>
+            <div id="image-grid"></div>
+        </div>
+    </div>
+    <script src="main.js"></script> 
+</body>
+</html>

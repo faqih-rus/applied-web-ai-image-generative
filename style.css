@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,500&family=Roboto+Slab:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:#001F3F;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+#img-logo {
+    max-width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px; /* Sesuaikan jarak atas yang diinginkan */
+    left: 50%; /* Untuk mengatur posisi horizontal di tengah */
+    transform: translateX(-50%); /* Untuk memusatkan gambar */
+}
+
+
+.container {
+    position:relative;
+    width:40rem;
+    color:#fff;
+    background-color:rgba(0,0,0,0.44);
+    padding:20px 30px;
+    border-radius:20px;
+    box-shadow:0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter:blur(7.4px);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.container::before {
+    content: "";
+    position:absolute;
+    background-color:#09ff8c;
+    width:120px;
+    height:120px;
+    filter: blur(140px);
+    left:-20%;
+    top:10%;
+    z-index:-1000;
+}
+
+.container::after {
+    content: "";
+    position:absolute;
+    background-color:#3ba4ff;
+    width:120px;
+    height:120px;
+    filter: blur(120px);
+    right:-20%;
+    bottom:-10%;
+    z-index:-1000;
+}
+
+h1 {
+    font-size:35px;
+    font-weight:400;
+    margin-bottom:15px;
+    text-align: center;
+}
+
+p {
+    font-size:18px;
+    color: #ccc;
+    line-height:1.4rem; 
+    text-align: justify;
+}
+
+.gen-form {
+    margin-top: 20px;
+    display:flex;
+    gap:10px;
+    width:100%;
+}
+
+input {
+    width:80%;
+    border-radius:8px;
+    outline:none;
+    border:none;
+    padding:0 15px;
+    background-color:rgba(0,0,0,0.1);
+    color:#fff;
+    border:1px solid #5f5f5f;
+    transition: all 0.3s ease
+
+}
+
+input:hover , input:focus {
+    border: color #675afe;
+}
+
+button {
+    width:20%;
+    height:36px;
+    color:#fff;
+    border:1px solid #999;
+    background: #20232c;
+    border-radius:8px;
+    font-size:0.9rem;
+    transition: all 0.3s ease;
+
+}
+
+button:hover {
+    background : rgb(53, 53, 120);
+    border-color:transparent;
+}
+
+button:disabled, button[disabled] {
+    border:1px solid #999;
+    background-color:#ccc;
+    color: #666;
+    cursor:auto;
+}
+
+#loading {
+    display:none;
+    font-size:18px;
+    margin:10px 0;
+}
+
+.result {
+    width:100%;
+    padding : 15px 0 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#image-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-bottom:10px;
+    max-width:80%;
+}
+
+#image-grid img {
+    border-radius: 18px;
+    max-width:100%;
+    cursor:pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+}
+
+#image-grid img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 30px green;
+}
+
+/* Mengatur ukuran font untuk layar mobile */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    input {
+        padding: 10px 12px;
+    }
+
+    button {
+        height: 32px;
+    }
+
+    #loading {
+        font-size: 16px;
+    }
+}
+
+/* Mengatur ukuran kontainer untuk layar mobile */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Responsivitas untuk gambar logo */
+#img-logo {
+    max-width: 180px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Mengatur ukuran kontainer untuk layar mobile */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    /* Mengatur ukuran maksimal gambar logo untuk layar mobile */
+    #img-logo {
+        max-width: 120px;
+        height: auto;
+    }
+}
+
+/* Responsivitas untuk gambar logo */
+#img-logo {
+    max-width: 180px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
